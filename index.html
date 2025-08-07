@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ランダム再生</title>
+</head>
+<body>
+  <h1>ランダムで音声が再生されるよ！</h1>
+  <audio id="player" controls autoplay></audio>
+
+  <script>
+    const sounds = ['namae.mp3', 'nenrei.mp3', 'suki1.mp3', 'suki2.mp3', 'tyoke1.mp3', 'tyoke2.mp3']; 
+    const randomIndex = Math.floor(Math.random() * sounds.length);
+    const selected = sounds[randomIndex];
+    const player = document.getElementById("player");
+    player.src = selected;
+  </script>
+</body>
+</html>
